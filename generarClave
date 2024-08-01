@@ -1,0 +1,31 @@
+import random
+import string
+
+
+letras_mayusculas = string.ascii_uppercase
+letras_minusculas = string.ascii_lowercase
+numeros = string.digits
+simbolos = string.punctuation
+
+def generar_contraseña(longitud=12):
+    # Asegurarse de incluir al menos un carácter de cada tipo
+    caracteres = (
+        random.choice(letras_mayusculas) +
+        random.choice(letras_minusculas) +
+        random.choice(numeros) +
+        random.choice(simbolos)
+    )
+    
+    # Completar el resto de la contraseña de manera aleatoria
+    if longitud > 4:
+        caracteres += ''.join(random.choices(letras_mayusculas + letras_minusculas + numeros + simbolos, k=longitud-4))
+    
+    # Mezclar los caracteres
+    caracteres = list(caracteres)
+    random.shuffle(caracteres)
+    return ''.join(caracteres)
+
+if __name__ == "__main__":
+    longitud = int(input("Introduce la longitud deseada para la contraseña: "))
+    contraseña = generar_contraseña(longitud)
+    print(f"Contraseña generada: {contraseña}")
