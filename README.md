@@ -51,11 +51,15 @@ letras_mayusculas = string.ascii_uppercase  # ABCDEFGHIJKLMNOPQRSTUVWXYZ
 letras_minusculas = string.ascii_lowercase  # abcdefghijklmnopqrstuvwxyz
 numeros = string.digits                    # 0123456789
 simbolos = string.punctuation              # !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
-string.ascii_uppercase: Nos da todas las letras mayúsculas del alfabeto.
-string.ascii_lowercase: Nos da todas las letras minúsculas.
-string.digits: Nos da todos los dígitos del 0 al 9.
-string.punctuation: Nos da símbolos especiales como !, @, #, etc.
 ```
+
+string.ascii_uppercase: Nos da todas las letras mayúsculas del alfabeto.
+
+string.ascii_lowercase: Nos da todas las letras minúsculas.
+
+string.digits: Nos da todos los dígitos del 0 al 9.
+
+string.punctuation: Nos da símbolos especiales como !, @, #, etc.
 
 ### 5. Crear una Función para Generar la Contraseña
 La función es como una receta que sigue pasos para generar una contraseña.
